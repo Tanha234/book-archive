@@ -13,12 +13,7 @@ function verifyMemoryCost(isAdd) {
     }
     else {
         memoryCost.innerText = 180;
-        // const totalCost = document.getElementById("total-price");
-        // const totalCostText = totalCost.innerText;
-        // const cost = parseFloat(totalCostText);
-        // const costly = cost + memory;
-        // totalCost.innerText = costly;
-
+        
     }
 
 }
@@ -56,7 +51,7 @@ function totalPrice() {
 
     total += parseInt(memoryCostTeext) + parseInt(storageCostText) + parseInt(deliveryCostTeext);
     totalCost.innerText = total;
-    console.log(total);
+    
 }
 
 //................. storage part................
@@ -85,6 +80,7 @@ document.getElementById("512gb-storage").addEventListener("click", function () {
 
 
 })
+      
 document.getElementById("1TB-storage").addEventListener("click", function () {
     const storageCost = document.getElementById("storage-cost");
     const storageCostText = storageCost.innerText;
@@ -134,16 +130,35 @@ document.getElementById("payable-delivery").addEventListener("click", function (
 
 
 })
+        //...............Bonus Part...........................
+
 document.getElementById("apply-button").addEventListener("click", function () {
-    const passFiled = document.getElementById("promo-code");
-    const passSubmit = passFiled.value;
-    if (emailUser == "stevekaku") {
-        const discount = document.getElementById("discount");
+    const userFiled = document.getElementById("promo-code");
+    console.log(1);
+    const totalPrice=document.getElementById("total-price");
+    const user = userFiled.value;
+    if (user == "stevekaku") {
+       
+       const totalValue=totalPrice%20;
+        const discount=document.getElementById("discount");
+        discount.value=totalValue;
 
 
 
     }
 }
 )
+// document.getElementById("login-button").addEventListener("click",function(){
+//     const mailField=document.getElementById("email-button");
+//     const emailUser=mailField.value;
+   
+    
+//     const passFiled=document.getElementById("password-button");
+//     const passSubmit=passFiled.value;
+//   if(emailUser=="abc@gamil.com" && passSubmit=="abc"){
+//       window.location.href='banking.html'
+
+//   }
+// })
 
 
