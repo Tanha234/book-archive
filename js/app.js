@@ -94,7 +94,7 @@ document.getElementById("1TB-storage").addEventListener("click", function () {
 
 
 
-
+//for 8gb memory
 
 document.getElementById("8gb-memory").addEventListener("click", function () {
     verifyMemoryCost(true);
@@ -104,6 +104,7 @@ document.getElementById("8gb-memory").addEventListener("click", function () {
 
 }
 )
+//for 16gb memory
 document.getElementById("16gb-memory").addEventListener("click", function () {
 
     verifyMemoryCost(false);
@@ -113,7 +114,7 @@ document.getElementById("16gb-memory").addEventListener("click", function () {
 
 })
 
-
+//free delivery
 document.getElementById('free-delivery').addEventListener("click", function () {
     deliveryOption(true);
     totalPrice();
@@ -121,6 +122,7 @@ document.getElementById('free-delivery').addEventListener("click", function () {
 
 
 })
+//payable delivery
 document.getElementById("payable-delivery").addEventListener("click", function () {
     deliveryOption(false);
     totalPrice();
@@ -136,10 +138,11 @@ document.getElementById("apply-button").addEventListener("click", function () {
     const finalPriceInt = parseInt(finalPriceText);
     const userInput = document.getElementById('promo-code');
     const user = userInput.value;
-    if (user == "abc") {
+    if (user == "stevekaku") {
         let totalValue = finalPriceInt - (finalPriceInt * (20 / 100));
         const discount = document.getElementById("discount");
         discount.innerText = totalValue;
+        userInput.value="";
     }
 }
 )
