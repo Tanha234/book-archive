@@ -134,14 +134,15 @@ document.getElementById("payable-delivery").addEventListener("click", function (
 
 document.getElementById("apply-button").addEventListener("click", function () {
     const userFiled = document.getElementById("promo-code");
-    console.log(1);
+    
     const totalPrice=document.getElementById("total-price");
     const user = userFiled.value;
-    if (user == "stevekaku") {
+    if (user == "abc") {
+        
        
-       const totalValue=totalPrice%20;
+       let totalValue=totalPrice-(totalPrice*20/100);
         const discount=document.getElementById("discount");
-        discount.value=totalValue;
+        discount.innerText=totalValue;
 
 
 
