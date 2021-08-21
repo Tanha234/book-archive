@@ -13,7 +13,7 @@ function verifyMemoryCost(isAdd) {
     }
     else {
         memoryCost.innerText = 180;
-        
+
     }
 
 }
@@ -38,10 +38,10 @@ function deliveryOption(isDelivery) {
 
     }
 }
-
 function totalPrice() {
-    const totalCost = document.getElementById("total-price");
     var total = 1299;
+
+    const totalCost = document.getElementById("total-price");
     const memoryCost = document.getElementById("memory-cost");
     let memoryCostTeext = memoryCost.innerText;
     const storageCostt = document.getElementById("storage-cost");
@@ -51,7 +51,7 @@ function totalPrice() {
 
     total += parseInt(memoryCostTeext) + parseInt(storageCostText) + parseInt(deliveryCostTeext);
     totalCost.innerText = total;
-    
+
 }
 
 //................. storage part................
@@ -80,7 +80,7 @@ document.getElementById("512gb-storage").addEventListener("click", function () {
 
 
 })
-      
+
 document.getElementById("1TB-storage").addEventListener("click", function () {
     const storageCost = document.getElementById("storage-cost");
     const storageCostText = storageCost.innerText;
@@ -125,41 +125,21 @@ document.getElementById("payable-delivery").addEventListener("click", function (
     deliveryOption(false);
     totalPrice();
 
-
-
-
-
 })
-        //...............Bonus Part...........................
+
+
+//...............Bonus Part...........................
 
 document.getElementById("apply-button").addEventListener("click", function () {
-    const userFiled = document.getElementById("promo-code");
-    
-    const totalPrice=document.getElementById("total-price");
-    const user = userFiled.value;
+    const finalPrice = document.getElementById('total-price');
+    const finalPriceText = finalPrice.innerText;
+    const finalPriceInt = parseInt(finalPriceText);
+    const userInput = document.getElementById('promo-code');
+    const user = userInput.value;
     if (user == "abc") {
-        
-       
-       let totalValue=totalPrice-(totalPrice*20/100);
-        const discount=document.getElementById("discount");
-        discount.innerText=totalValue;
-
-
-
+        let totalValue = finalPriceInt - (finalPriceInt * (20 / 100));
+        const discount = document.getElementById("discount");
+        discount.innerText = totalValue;
     }
 }
 )
-// document.getElementById("login-button").addEventListener("click",function(){
-//     const mailField=document.getElementById("email-button");
-//     const emailUser=mailField.value;
-   
-    
-//     const passFiled=document.getElementById("password-button");
-//     const passSubmit=passFiled.value;
-//   if(emailUser=="abc@gamil.com" && passSubmit=="abc"){
-//       window.location.href='banking.html'
-
-//   }
-// })
-
-
