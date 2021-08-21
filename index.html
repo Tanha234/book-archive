@@ -28,17 +28,17 @@
                           <h4 class="fw-bold">Memory</h4>
                          
                           <div class="memory">
-                            <button class="p-2 rounded" >8GB Unified Memory</button>
-                            <button class="p-2 rounded">16GB Unified Memory</button>
+                            <button id="8gb-memory" class="p-2 rounded" >8GB Unified Memory</button>
+                            <button id="16gb-memory"class="p-2 rounded">16GB Unified Memory</button>
                           </div>
                               </div> 
                               <!-- Storage -->
                              <div class="pb-5">
                                 <h4 class="fw-bold">Storage</h4>
                                 <div>
-                                    <button class="p-2 rounded" >256GB SSD Storage </button>
-                                    <button class="p-2 rounded">512GB SSD Storage </button>
-                                    <button class="p-2 rounded">1TB SSD Storage</button>
+                                    <button id="256gb-storage" class="p-2 rounded" >256GB SSD Storage </button>
+                                    <button id="512gb-storage" class="p-2 rounded">512GB SSD Storage </button>
+                                    <button id="1TB-storage"class="p-2 rounded">1TB SSD Storage</button>
                                 </div>
                               </div>
                               <!-- <div class="my-3 ">
@@ -57,8 +57,8 @@
                                   <!-- Delivery -->
                                 <div class="pb-5">
                                 <h4 class="mb-4 fw-bold">Choose your delivery option</h4>
-                                <button class="p-2 px-3 rounded">Friday,25Aug FREE Prime Delivery</button>
-                                <button class="p-2 px-3 rounded">Friday,Aug 21 delivery charge $20</button>
+                                <button id="free-delivery" class="p-2 px-3 rounded">Friday,25Aug FREE Prime Delivery</button>
+                                <button id="payable-delivery" class="p-2 px-3 rounded">Friday,Aug 21 delivery charge $20</button>
                                
                               </div>
                               <!-- Total -->
@@ -74,20 +74,20 @@
                                       <tr>
                                         
                                         <td>Extra Memory Cost</td>
-                                        <td>$0</td>
+                                        <td>$<span id="memory-cost">0</span></td>
                                         
                                       </tr>
                                       <tr>
                                         
                                         <td>Extra Storage Cost</td>
-                                        <td>$0</td>
+                                        <td>$<span id="storage-cost">0</span></td>
                                        
                                       </tr>
                                       
                                       <tr>
                                        
                                         <td>Delivery Charge</td>
-                                        <td>$0</td>
+                                        <td>$<span id="delivery-charge-cost">0</span></td>
                                       
                                       </tr>
                                       <tr>
